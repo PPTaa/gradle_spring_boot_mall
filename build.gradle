@@ -25,11 +25,11 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	//mybatis Ãß°¡
+	//mybatis ï¿½ß°ï¿½
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.0'
-	//jdbc Ãß°¡
+	//jdbc ï¿½ß°ï¿½
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-	//mysql Ãß°¡
+	//mysql ï¿½ß°ï¿½
 	implementation 'mysql:mysql-connector-java'
 	
 	compileOnly 'org.projectlombok:lombok'
@@ -38,6 +38,9 @@ dependencies {
 	compile group: 'org.webjars', name: 'jquery', version: '3.4.1'
 	// https://mvnrepository.com/artifact/org.webjars/bootstrap
 	compile group: 'org.webjars', name: 'bootstrap', version: '4.4.1'
+	// https://mvnrepository.com/artifact/net.sf.json-lib/json-lib
+	compile group: 'net.sf.json-lib', name: 'json-lib', version: '2.4', classifier: 'jdk15'
+	
 	
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	

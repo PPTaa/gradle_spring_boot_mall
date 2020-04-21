@@ -2,18 +2,61 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 페이지</title>
+	<title>관리자 페이지</title>
+	
+	<script type="text/javascript" src="/webjars/jquery/3.4.1/jquery.min.js"/>
+	<link rel="stylesheet" href="/webjars/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script type="text/javascript" src="/webjars/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<style>
+	 body { font-family:'맑은 고딕', verdana; padding:0; margin:0; }
+	 ul { padding:0; margin:0; list-style:none;  }
+	
+	 div#root { width:90%; margin:0 auto; }
+	 
+	 header#header { font-size:30px; padding:20px 0; }
+	 header#header h1 a { color:#000; font-weight:bold; }
+	 
+	 nav#nav { padding:10px; text-align:right; }
+	 nav#nav ul li { display:inline-block; margin-left:10px; }
+	
+	   section#container { padding:20px 0; border-top:2px solid #eee; border-bottom:2px solid #eee; }
+	 section#container::after { content:""; display:block; clear:both; }
+	 aside#aside { float:left; width:200px; }
+	 
+	 div#container_box { float:right; width:calc(100% - 200px - 20px); }
+	 
+	 aside#aside ul li { text-align:center; margin-bottom:10px; }
+	 aside#aside ul li a { display:block; width:100%; padding:10px 0;}
+ 	 aside#aside ul li a:hover { background:#eee; }
+ 	 
+	 footer#footer { background:#f9f9f9; padding:20px; }
+	 footer#footer ul li { display:inline-block; margin-right:10px; }
+	</style>
 </head>
 <body>
 	<div id="root">
-		<header id="header" th:replace="/admin/include/header"></header>
-		<nav id="nav" th:replace="/admin/include/nav"></nav>
+		<header id="header">
+			<div id="header_box" th:replace="/admin/include/header"></div>
+		</header>
+		
+		<nav id="nav">
+			<div id="nav_box" th:replace="/admin/include/nav"></div>
+		</nav>
+		
 		<section id="container">
+			<aside id="aside">
+				<div id="aside_box" th:replace="/admin/include/aside">></div>
+			</aside>
+			
 			<div id="container_box">
 				본문
 			</div>
 		</section>
-		<footer id="footer" th:replace="/admin/include/footer"></footer>
+		
+		<footer id="footer">
+			<div id="footer_box" th:replace="/admin/include/footer"></div>
+		</footer>
 	</div>
 
 </body>
