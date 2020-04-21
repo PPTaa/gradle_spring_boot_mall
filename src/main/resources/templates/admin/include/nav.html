@@ -1,0 +1,14 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<meta charset="UTF-8">
+
+<ul th:if="${member != null}">
+ <li th:inline="text">
+   관리자 [[${member.userName}]] 님 환영합니다.
+ </li>
+ <li>
+  <a href="/home">일반 페이지</a>
+ </li>
+ <li>
+  <a href="/member/logout">로그아웃</a>
+ </li>
+</ul>

@@ -1,0 +1,22 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<meta charset="UTF-8">
+
+<ul>
+ <li th:if="${member == null}">
+  <a href="/member/login">로그인</a>
+ </li>
+ <li th:if="${member == null}">
+  <a href="/member/signup">회원가입</a>
+ </li>
+</ul>
+<ul th:if="${member != null}">
+ <li th:inline="text">
+  [[${member.userName}]]님 환영합니다.
+ </li>
+ <li th:if="${member.verify == 9}">
+  <a href="/admin/index">관리자 페이지</a>
+ </li>
+ <li>
+  <a href="/member/logout">로그아웃</a>
+ </li>
+</ul>
